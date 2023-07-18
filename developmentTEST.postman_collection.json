@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "d9b32fd3-64e5-402e-a67e-bafef5a970cc",
+		"name": "developmentTEST",
+		"description": "# 개발서버 api Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27334851"
+	},
+	"item": [
+		{
+			"name": "https://devawsback.gongsacok.com/pub/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\":\"test\",\r\n    \"passwd\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/pub/login"
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":\"test\",\r\n    \"passwd\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://devawsback.gongsacok.com/pub/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 01:07:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"uid\": 12,\n        \"userid\": \"test\",\n        \"jtoken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MjQ0MywiZXhwIjoxNjg5NzI4ODQzfQ.DPX_k5xNsc45lV1UsGK_SGnux7iy-EMNFdwdOgybMe0\",\n        \"userrole\": \"ROLE_USER,ROLE_ADMIN\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "https://devawsback.gongsacok.com/admin/addSalesKeyword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MDU4NSwiZXhwIjoxNjg5NzI2OTg1fQ.q-_kbG7lzRXjBVW2wGlakxjbbS2T4979-v4HwVQKcfs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\":\"방충망\",\r\n    \"rcid\":\"23\",\r\n    \"prior\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/admin/addSalesKeyword"
+			},
+			"response": []
+		},
+		{
+			"name": "https://devawsback.gongsacok.com/admin/setSalesKeyword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MDU4NSwiZXhwIjoxNjg5NzI2OTg1fQ.q-_kbG7lzRXjBVW2wGlakxjbbS2T4979-v4HwVQKcfs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"skid\":\"17\",\r\n    \"prior\":\"9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/admin/setSalesKeyword"
+			},
+			"response": []
+		},
+		{
+			"name": "https://devawsback.gongsacok.com/admin/isSalesKeyword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MDU4NSwiZXhwIjoxNjg5NzI2OTg1fQ.q-_kbG7lzRXjBVW2wGlakxjbbS2T4979-v4HwVQKcfs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\":\"방충망\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/admin/isSalesKeyword"
+			},
+			"response": []
+		},
+		{
+			"name": "https://devawsback.gongsacok.com/pub/listSalesKeyword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MDU4NSwiZXhwIjoxNjg5NzI2OTg1fQ.q-_kbG7lzRXjBVW2wGlakxjbbS2T4979-v4HwVQKcfs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\":\"방충망\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/pub/listSalesKeyword"
+			},
+			"response": []
+		},
+		{
+			"name": "https://devawsback.gongsacok.com/svc/setBlackList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MjQ0MywiZXhwIjoxNjg5NzI4ODQzfQ.DPX_k5xNsc45lV1UsGK_SGnux7iy-EMNFdwdOgybMe0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"blist\":\"2\",\r\n    \"ruid\":168\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/svc/setBlackList"
+			},
+			"response": []
+		},
+		{
+			"name": "https://devawsback.gongsacok.com/svc/getBlackList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTY4OTY0MjQ0MywiZXhwIjoxNjg5NzI4ODQzfQ.DPX_k5xNsc45lV1UsGK_SGnux7iy-EMNFdwdOgybMe0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruid\":168\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://devawsback.gongsacok.com/svc/getBlackList"
+			},
+			"response": []
+		}
+	]
+}
